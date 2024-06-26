@@ -35,6 +35,19 @@
                 </select>
             </div>
 
+            <div class="my-3">
+                <h4>Seleziona tecnologia :</h4>
+                <ul class="list-group w-50">
+                    @foreach ($technologies as $technology)
+                        <li class="list-group-item">
+                            <input type="checkbox" @checked(in_array($technology->id, old('technologies', []))) name="technologies[]"
+                                class="form-check-input me-1" value="{{ $technology->id }}"
+                                id="technology-{{ $technology->id }}"> <span class="fw-semibold px-2">{{ $technology->name }}</span> <i class="fw-lighter">{{ $technology->version }}</i>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione progetto :</label>
                 <textarea class="form-control" id="description" name="description" rows="3">{{ old('description') }}</textarea>

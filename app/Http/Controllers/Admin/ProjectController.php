@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\Technology;
 use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -27,8 +28,9 @@ class ProjectController extends Controller
     public function create()
     {
         $typeList = Type::all();
+        $technologies = Technology::all();
         // Restituisco la view per aggiungere dati
-        return view('admin.project.create', compact('typeList'));
+        return view('admin.project.create', compact('typeList','technologies'));
     }
 
     /**
