@@ -77,6 +77,13 @@
                   <i class="fa-solid fa-list"></i> Tabella Tipi
                 </a>
               </li>
+              <li class="nav-item">
+                {{-- Route::currentRouteName() è un metodo della classe route che permette di restituire il nome attuale --}}
+                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.technologies.index' ? 'bg-secondary' : '' }}"
+                  href="{{ route('admin.technologies.index') }}">
+                  <i class="fa-solid fa-list"></i> Tabella Tech
+                </a>
+              </li>
             </ul>
 
 
