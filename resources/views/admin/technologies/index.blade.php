@@ -9,7 +9,7 @@
             </div>
         @endif
         <a href="{{ route('admin.technologies.create') }}" class="btn btn-primary my-2"> + Tecnologia</a>
-        <table class="table table-primary table-striped text-center align-middle">
+        <table class="table table-secondary table-striped text-center align-middle">
             <thead>
                 <tr>
                     <th scope="col">ID</th>

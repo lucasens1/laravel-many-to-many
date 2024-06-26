@@ -15,6 +15,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Titolo</th>
                     <th scope="col">Tipo</th>
+                    <th scope="col">Tecnologie Usate</th>
                     <th scope="col">Descrizione</th>
                     <th scope="col">Azioni</th>
                 </tr>
@@ -25,6 +26,8 @@
                         <th scope="row"> {{ $project->id }}</td>
                         <td> {{ $project->title }} </td>
                         <td> <span class="btn" style="color: white; background-color: {{ $project->type?->color }}">{{ $project->type?->name }}</span></td>
+                        {{-- Uso count per mostrare il numero di tech usate --}}
+                        <td> {{ $project->technologies?->count()}}</td>
                         <td> {{ $project->description }} </td>
                         <td>
                             <div class="d-flex gap-2">
